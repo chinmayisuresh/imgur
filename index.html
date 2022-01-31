@@ -1,0 +1,154 @@
+<html>
+  <header><meta name="referrer" content="no-referrer"></header>
+<link rel='stylesheet' href='style.css' >
+<link rel='icon' href='https://s.imgur.com/images/favicon-32x32.png'>
+<title>Imgur: The magic of Internet</title>
+
+
+<div class="topbar">
+
+     <div class='imgurborder'>
+          <img class='imgurimage' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Imgur_Logo_Light.svg/1280px-Imgur_Logo_Light.svg.png'>
+     </div>
+     
+     <button class='newpostbutton'>New Post</button>
+     <button class='signupbutton'>Sign up</button>
+     <button class='signinborder'>Sign in</button>
+     <button class='Go-Ad-Free'>Go-Ad-Free</button>
+
+     <div class='searchborder'>
+     <input class='search' id='hhh' placeholder='Images, #tags ,@users ,on my!' >
+     <img  onclick='input()' class='searchicon' src='https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg'>
+     </div>
+     
+     <div class="Message">Life is short. Smile while you still have teeth.</div>
+
+    
+</div>
+
+<div id='showvideo'>
+  <div class='b'></div>
+</div>
+
+
+
+<script>
+url1 = 'https://api.imgur.com/3/gallery/hot/viral/1/month?showViral=true&mature=true&album_previews=true';
+function input(){
+  var x=document.getElementById('hhh').value;
+  getImg(url1);
+  console.log(x);
+
+}
+     async function getImg(url) {
+  //console.log(url)
+    let headersList = {
+      Authorization: "Client-ID 133ef594650a58d",
+    };
+
+    let d = await fetch(
+      `${url}`,
+      {
+        method: "GET",
+        headers: headersList,
+      }
+    );
+
+    let { data } = await d.json();
+   console.log(data);
+   var show=document.getElementById('showvideo');
+
+   for(let i=0;i<data.length;i++){
+     var b=document.createElement('div');
+     
+     b.style.height='50%';
+     b.style.width='20%';
+     b.style.float='left';
+     b.style.backgroundColor='darkgrey';
+     b.style.marginLeft='2%';
+     b.style.marginBottom='2%';
+     b.style.borderRadius='3%';
+     b.style.boxShadow='2px 4px 2px 5px transparent';
+     
+     
+     
+     var a=document.createElement('img');
+     a.src=data[i].images[0].link;
+     a.style.height='80%';
+     a.style.width='100%';
+     a.style.borderRadius='20px';
+    
+
+     var title=document.createElement('h5');
+     title.innerHTML=data[i].title;
+     title.style.color='white';
+     
+
+     b.append(a,title);
+     show.append(b);
+   }
+   
+    
+ 
+  }
+ 
+
+  function appendData(data) {
+   
+    let one = document.getElementById('one');
+    let two = document.getElementById('two');
+    let three = document.getElementById('three');
+    let four = document.getElementById('four');
+    let five = document.getElementById('five');
+
+    one.innerHtml = null;
+    two.innerHTML = null;
+    three.innerHTML = null;
+    four.innerHtml = null;
+    five.innerHTML = null;
+
+
+    for(let j=0 ; j<=data.length ; j++){
+      if (
+       data[j]?.images?.[0].link &&
+         (data[j]?.images?.[0].type == "image/jpeg" ||
+           data[j]?.images?.[0].type == "image/gif")
+       ) {
+       
+         let imgdiv = document.createElement("div");
+         let img = document.createElement("img");
+         img.src = data[j]?.images?.[0].link;
+
+         if(data[j]?.images?.[0].type == "image/gif"){
+           img.style.border ='3px solid transparent';
+           img.style.borderImage = 'linear-gradient(to right, rgb(105, 216, 202) 0%, rgb(53, 146, 255) 50%, rgb(156, 49, 255) 100%)'
+           img.style.borderImageSlice = '1';
+         }
+
+         imgdiv.append(img);
+
+         if(j%5 === 0){
+          five.append(imgdiv);
+         }else if(j%4 === 0){
+           four.append(imgdiv)
+         }else if(j%3 === 0){
+           three.append(imgdiv)
+         }else if(j%2 === 0){
+           two.append(imgdiv)
+         }else{
+           one.append(imgdiv);
+         }
+       
+       }
+
+    }
+  }
+
+  
+ getImg(url1);
+
+
+  
+ 
+</script>
+</html>

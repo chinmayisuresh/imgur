@@ -1,0 +1,167 @@
+body{
+    background-color:rgb(39, 38, 38);
+}
+#showvideo{
+    
+    width:85%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:1%;
+    
+}
+h5{
+    font-family: cursive;
+}
+
+.topbar{
+    height:60%;
+    width:100%;
+    
+    background-image:url('https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png');
+}
+
+.imgurborder{
+    height: 8%;
+    width:7%;
+    float:left;
+    margin-left:1%;
+    margin-top:1%;
+}
+
+.imgurimage{
+    float:left;
+    height:100%;
+    width:100%;
+    
+}
+
+.signupbutton{
+        float:right;
+        
+        height: 10%;
+        width:7%;
+        border-radius: 3px;
+        font-size: 100%;
+        text-align:center;
+        font-weight: 700;
+        background-color: #1bb76e;
+        box-shadow: 0 6px 10px 0 rgb(27 28 30 / 31%);
+        color: #fff;
+        cursor:pointer;
+        margin-left:2%;
+        margin-right:2%;
+        margin-top:1%;
+        border-style:none;
+        
+}
+.newpostbutton{
+    border-style:none;
+    float:left;
+    height: 10%;
+    width:10%;
+    border-radius: 3px;
+    font-size: 100%;
+    text-align:center;
+    font-weight: 700;
+        background-color: #1bb76e;
+        box-shadow: 0 6px 10px 0 rgb(27 28 30 / 31%);
+        color: #fff;
+        cursor:pointer;
+        margin-left:2%;
+        margin-right:2%;
+        margin-top:1%;
+
+}
+
+.search{
+    background:none;
+    border: 1px solid transparent;
+    padding: 8px 35px 8px 10px;
+    border-radius: 3px;
+    width: 80%;
+    outline: 0 none;
+    opacity: .8;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #fff;
+    text-shadow: inherit;
+    -webkit-text-fill-color: inherit;
+    float:left;
+    
+}
+.searchborder{
+    outline: 0 none;
+    opacity: .8;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background: hsla(0,0%,100%,.25);
+    height:10.5%;
+    width:40%;
+    margin-left:29%;
+    margin-top:1%;
+
+}
+
+::placeholder{
+    
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: rgb(189, 187, 187);
+    text-shadow: inherit;
+}
+.searchicon{
+    float:right;
+    margin-top:1.5%;
+    margin-right:1%;
+    
+    
+}
+
+.signinborder{
+    float:right;
+    height: 10%;
+    width:7%;
+    border-radius: 3px;
+    font-size: 100%;
+    text-align:center;
+    font-weight: 700;
+    background-color:transparent;
+    
+    color: #fff;
+    cursor:pointer;
+    border-style:none;
+    margin-top:1%;
+    
+}
+.Go-Ad-Free{
+    float:right;
+    height: 10%;
+    width:8%;
+    border-radius: 3px;
+    font-size: 100%;
+    text-align:center;
+    font-weight: 700;
+    background-color:#6432f9;
+    
+    color: #fff;
+    cursor:pointer;
+    border-style:none;
+    margin-top:1%;
+
+}
+
+.Message {
+    font-size: 22px;
+    font-family: Proxima Nova ExtraBold,Helvetica Neue,Helvetica,Arial,sans-serif;
+    letter-spacing: .6px;
+    color: #aed8ea;
+    text-align: center;
+    margin-top: 15px;
+    min-height: 34px;
+    position: relative;
+    font-weight:700;
+    
+}
